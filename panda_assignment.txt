@@ -1,0 +1,10 @@
+sed 's/zoo/ /gi' /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/panda_zoos.txt
+grep -v "name" /Users/petrabora/Downloads/pandas.tsv | awk '{print $1,$4,$2}' /Users/petrabora/Downloads/pandas.tsv | sort -k3,3 | >> /Users/petrabora/Downloads/sorted_pandas.txt
+grep -v "location" /Users/petrabora/Downloads/pandas.tsv |cut -f5 /Users/petrabora/Downloads/pandas.tsv |sort >> /Users/petrabora/Downloads/panda_zoos_A2Z.txt
+sed 's/female/F/gi; s/male/M/gi' /Users/petrabora/Downloads/pandas.tsv | >> /Users/petrabora/Downloads/panda_m_f.txt
+grep -c "female" /Users/petrabora/Downloads/pandas.tsv | grep -c "October" /Users/petrabora/Downloads/pandas.tsv
+grep -n "." /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/panda_names.txt
+sed -n '1p; 6p; 17p' /Users/petrabora/Downloads/pandas.tsv | >> /Users/petrabora/Downloads/lines_1_6_17.txt
+grep -i "x" /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/x_lines.txt
+awk '{print}' /Users/petrabora/Downloads/pandas.tsv | sort -u >> /Users/petrabora/Downloads/unique_places.txt
+awk '$4 < 11 {print $1,$4}' /Users/petrabora/Downloads/pandas.tsv | sort >> /Users/petrabora/Downloads/young_pandas.txt
