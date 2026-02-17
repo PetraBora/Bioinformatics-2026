@@ -7,4 +7,4 @@ grep -n "." /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/
 sed -n '1p; 6p; 17p' /Users/petrabora/Downloads/pandas.tsv | >> /Users/petrabora/Downloads/lines_1_6_17.txt
 grep -i "x" /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/x_lines.txt
 awk '{print}' /Users/petrabora/Downloads/pandas.tsv | sort -u >> /Users/petrabora/Downloads/unique_places.txt
-awk '$4 < 11 {print $1,$4}' /Users/petrabora/Downloads/pandas.tsv | sort >> /Users/petrabora/Downloads/young_pandas.txt
+awk '$4 < 11 {print $1,$4}' /Users/petrabora/Downloads/pandas.tsv | sort -nk2 >> /Users/petrabora/Downloads/young_pandas.txt
