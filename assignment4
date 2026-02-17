@@ -1,0 +1,10 @@
+makeblastdb -in database_mystery_transcripts.fasta -dbtype nucl -out nuc_database
+makeblastdb -in database_mystery_proteins.fasta -dbtype prot -out pro_database
+blastn -db nuc_database -query query_mystery_nucleotide.fasta -evalue 0.003 -max_hsps 5 -outfmt 7 -out blastn_out.txt
+T010027234997, T010003453160, T010027234995
+grep -v "#" blastn_out.txt | awk '$3 >90 {print $2}' >> most_similar.txt
+blastp -db pro_database -query query_mystery_protein.fasta -evalue 1e-5 -max_hsps 15 -outfmt 7 -out blastp_out.txt
+P010027090796, P010027090798, P010027073865, P010027077695
+Coffea arabica
+Gardenia jasminoides
+Putative catalase
