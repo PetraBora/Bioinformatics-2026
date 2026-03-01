@@ -1,0 +1,14 @@
+Task\ label=Bats_newick
+Task\ ID=3308766
+Tool=RAXMLHPC8_XSEDE
+created\ on=2026-02-24 11:50:07.0
+JobHandle=NGBW-JOB-RAXMLHPC8_XSEDE-36692E1A5A144BE2BDF8C5997BD735E6
+RunNumber=1
+resource=expanse
+User\ ID=178427
+User\ Name=petrabora
+email=petra.h.bora@wmich.edu
+Output=(all_outputfiles,*,UNKNOWN,UNKNOWN,UNKNOWN)
+ChargeFactor=1.000000
+cores=40
+JOBID=46732576
