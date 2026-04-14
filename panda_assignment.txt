@@ -1,4 +1,4 @@
-sed 's/zoo/id' /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/panda_zoos.txt
+sed '/zoo/Id' /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/panda_zoos.txt
 grep -v "name" /Users/petrabora/Downloads/pandas.tsv | awk '{print $1,$4,$2}' | sort -k3,3 | >> /Users/petrabora/Downloads/sorted_pandas.txt
 grep -v "location" /Users/petrabora/Downloads/pandas.tsv |cut -f5 /Users/petrabora/Downloads/pandas.tsv |sort >> /Users/petrabora/Downloads/panda_zoos_A2Z.txt
 sed 's/female/F/gi; s/male/M/gi' /Users/petrabora/Downloads/pandas.tsv >> /Users/petrabora/Downloads/panda_m_f.txt
