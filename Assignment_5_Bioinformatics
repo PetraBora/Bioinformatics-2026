@@ -1,4 +1,5 @@
 #3
+muscle -seqtype auto -in infile.fasta -maxiters 16 -log logfile.txt -weight1 clustalw -cluster1 upgmb -sueff 0.1 -root1 pseudo -maxtrees 1 -weight2 clustalw -cluster2 upgmb -sueff 0.1 -root2 pseudo -objscore sp -noanchors -out output.fasta
 raxmlHPC-HYBRID-AVX -T 4 -f a -N autoMRE -n RAxML_bats_tree -s infile.txt -c 25 -p 12345 -m PROTCATDAYHOFF -x 12345
 
 #4
